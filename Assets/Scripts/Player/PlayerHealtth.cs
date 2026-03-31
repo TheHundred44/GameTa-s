@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealtth : MonoBehaviour
 {
-    public int life = 4;
+    public int life = 2;
     public GameObject[] LifeIndicator;
     public GameObject LoseGameScreen;
 
