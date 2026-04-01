@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
-        Debug.Log(animator);
         animator.SetTrigger("Jump");
     }
 
@@ -27,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = boostSpeed;
             particleJump.Play();
+            animator.SetTrigger("Jump");
         }
 
         transform.position += Vector3.up * speed * Time.deltaTime;

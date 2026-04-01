@@ -16,5 +16,6 @@ public class SkinLoader : MonoBehaviour
             skins[i].SetActive(i == index);
             indexCharacter = i;
         }
+        Time.timeScale = 1.0f;
     }
 }
