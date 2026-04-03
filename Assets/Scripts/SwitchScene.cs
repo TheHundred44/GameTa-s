@@ -11,12 +11,16 @@ public class SwitchScene : MonoBehaviour
     public void ButtonSwwitchScene(string gameObject)
     {
         SceneManager.LoadScene(gameObject);
+        Time.timeScale = 1.0f;
+
     }
 
     public void PlayStart(int index)
     {
         SelectCharacter.Number = index;
         SceneManager.LoadScene("Game");
+        Time.timeScale = 1.0f;
+
     }
 
     public void OpenLink(string url)
@@ -28,5 +32,7 @@ public class SwitchScene : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
         Time.timeScale = 1.0f;
+        Time.timeScale = 1.0f;
+
     }
 }
