@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ChangeCanvas : MonoBehaviour
 {
+    private void Start()
+    {
+        Time.timeScale = 1.0f;
+    }
     public void OpenCanvas(GameObject gameObject)
     {
         gameObject.SetActive(true);

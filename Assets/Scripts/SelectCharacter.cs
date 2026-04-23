@@ -7,6 +7,7 @@ public class SelectCharacter : MonoBehaviour
     public GameObject[] Characters;
     public static int Number;
 
+
     public void ChangeCharacter(int Num)
     {
         for (int i = 0; i < Characters.Length; i++)
