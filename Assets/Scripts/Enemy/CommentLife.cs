@@ -7,14 +7,16 @@ using UnityEngine;
 public class CommentLife : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
+    private Vector3 targetScale;
 
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
 
-        // On initialise l'objet invisible et tout petit
-        canvasGroup.alpha = 1f;
-        transform.localScale = Vector3.zero;
+        // AU LIEU DE : transform.localScale = Vector3.zero;
+        // ON FAIT :
+        targetScale = transform.localScale; // On mémorise si c'est 0.5, 1.2, etc.
+        transform.localScale = Vector3.zero; // On met à zéro pour l'anim
     }
 
     void Start()
@@ -32,13 +34,14 @@ public class CommentLife : MonoBehaviour
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            // Utilise une courbe douce (SmoothStep) pour le zoom
             float percent = Mathf.SmoothStep(0, 1, elapsed / duration);
-            transform.localScale = Vector3.one * percent;
+
+            // ON APPLIQUE LE POURCENTAGE SUR LA TAILLE CIBLE
+            transform.localScale = targetScale * percent;
             yield return null;
         }
 
-        transform.localScale = Vector3.one;
+        transform.localScale = targetScale;
     }
 
     // Cette fonction est appelée par le CommentManager

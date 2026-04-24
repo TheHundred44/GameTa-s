@@ -22,7 +22,7 @@ public class PlayerHealtth : MonoBehaviour
     //}
 
     public int maxHealth = 3;
-    private int currentHealth;
+    public int currentHealth;
 
     [Header("UI : Objets du Churros")]
     // Glisse ici tes 4 objets (0 HP, 1 HP, 2 HP, 3 HP)

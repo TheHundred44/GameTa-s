@@ -6,6 +6,7 @@ public class EndGame : MonoBehaviour
 {
     public GameObject endScreen;
 
+    public Score score;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -25,6 +26,7 @@ public class EndGame : MonoBehaviour
     void ShowEndScreen()
     {
         endScreen.SetActive(true);
+        score.AfficherResultatsFinaux();
         Time.timeScale = 0.0f;
     }
 }

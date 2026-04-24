@@ -43,17 +43,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 38, y: 280, z: 37, w: 269}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -93,18 +93,75 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
+    sprites:
+    - serializedVersion: 2
+      name: ChatGPT Image 1 avr. 2026, 17_28_18_4
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 272
+        width: 1465
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234cf1b4922b7874b9a1f8d76e7319c6
+      internalID: -1339853750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT Image 1 avr. 2026, 17_28_18_7
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 364
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e86578b8d87564982ca3cbf87e7170
+      internalID: -462521662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -737, y: -229}
+      - {x: 734, y: -239}
+      - {x: 738, y: 243}
+      - {x: -738, y: 242}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ChatGPT Image 1 avr. 2026, 17_28_18_0: -1221871377
+      ChatGPT Image 1 avr. 2026, 17_28_18_1: -905171801
+      ChatGPT Image 1 avr. 2026, 17_28_18_10: -864202569
+      ChatGPT Image 1 avr. 2026, 17_28_18_2: 646045420
+      ChatGPT Image 1 avr. 2026, 17_28_18_3: 1459579282
+      ChatGPT Image 1 avr. 2026, 17_28_18_4: -1339853750
+      ChatGPT Image 1 avr. 2026, 17_28_18_5: -1560715272
+      ChatGPT Image 1 avr. 2026, 17_28_18_6: -1271206869
+      ChatGPT Image 1 avr. 2026, 17_28_18_7: -462521662
+      ChatGPT Image 1 avr. 2026, 17_28_18_8: -152906288
+      ChatGPT Image 1 avr. 2026, 17_28_18_9: 300709496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

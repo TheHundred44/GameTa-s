@@ -22,14 +22,9 @@ public class CommentManager : MonoBehaviour
     {
         GameObject randomPrefab = commentPrefabs[Random.Range(0, commentPrefabs.Length)];
 
-        // 1. Instancier SANS parent d'abord
-        GameObject go = Instantiate(randomPrefab);
+        // Utilise cette version de Instantiate, c'est la plus propre pour l'UI
+        GameObject go = Instantiate(randomPrefab, spawnArea);
 
-        // 2. Lui donner le parent en précisant 'false' pour worldPositionStays
-        // C'est ce 'false' qui empêche Unity de changer le scale
-        go.transform.SetParent(spawnArea, false);
-
-        // 3. Maintenant on règle la position et la rotation
         RectTransform rect = go.GetComponent<RectTransform>();
 
         float x = Random.Range(-spawnArea.rect.width / 2f, spawnArea.rect.width / 2f);
@@ -38,8 +33,10 @@ public class CommentManager : MonoBehaviour
         rect.anchoredPosition = new Vector2(x, y);
         go.transform.localRotation = Quaternion.Euler(0, 0, Random.Range(-20f, 20f));
 
-        // 4. Par sécurité, on s'assure que le scale est bien celui du prefab (1,1,1)
-        go.transform.localScale = Vector3.one;
+        // SUPPRIME CETTE LIGNE :
+        // go.transform.localScale = Vector3.one; 
+
+        // L'objet va maintenant garder le scale défini dans son Prefab !
 
         if (go.TryGetComponent(out CommentLife life))
         {

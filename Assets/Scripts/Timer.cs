@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     [Header("UI Reference")]
     public TextMeshProUGUI timerText;
 
-    private float elapsedTime = 0f;
+    public float elapsedTime = 0f;
     private bool isPaused = false;
 
     void Update()
