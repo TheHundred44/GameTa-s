@@ -5,8 +5,20 @@ using UnityEngine;
 public class EndGame : MonoBehaviour
 {
     public GameObject endScreen;
+    public GameObject persoN;
+    public GameObject persoN2;
+    public GameObject persoF;
+    public GameObject persoF2;
 
     public Score score;
+
+    private void Awake()
+    {
+        persoF.SetActive(false);
+        persoF2.SetActive(false);
+        persoN2.SetActive(true);
+        persoN.SetActive(true);
+    }
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -25,6 +37,10 @@ public class EndGame : MonoBehaviour
 
     void ShowEndScreen()
     {
+        persoN.SetActive(false);
+        persoN2.SetActive(false);
+        persoF2.SetActive(true);
+        persoF.SetActive(true);
         endScreen.SetActive(true);
         score.AfficherResultatsFinaux();
         Time.timeScale = 0.0f;

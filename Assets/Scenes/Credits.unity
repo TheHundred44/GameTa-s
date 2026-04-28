@@ -252,7 +252,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 94130b156f088e2498d181fd585b1705, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 24ee950b8ef6c4745b25f874dcb7a840, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Musique & id\xE9es cr\xE9atives : Tha\xEFs Lona"
+  m_text: "Music & Creative Idea : Tha\xEFs Lona"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18831c5a3eb1c63499539e5104fc281b, type: 2}
   m_sharedMaterial: {fileID: 8912521701712341195, guid: 18831c5a3eb1c63499539e5104fc281b, type: 2}
