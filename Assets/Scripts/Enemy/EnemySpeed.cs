@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class EnemySpeed : MonoBehaviour
 {
+
+    [Header("Réglages au Spawn")]
+    public bool flipOnSpawn = false;
+
+    private SpriteRenderer spriteRenderer;
+
     public float speed = 2f;
     public int direction = 0;
 
@@ -19,6 +25,13 @@ public class EnemySpeed : MonoBehaviour
         life = FindObjectOfType<PlayerHealtth>();
         // On mémorise la hauteur de départ pour osciller autour
         startY = transform.position.y;
+
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        if (flipOnSpawn)
+        {
+            FlipEnemy();
+        }
     }
 
     void Update()
@@ -41,6 +54,15 @@ public class EnemySpeed : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             if (life != null) life.LifeHit();
+        }
+    }
+
+    public void FlipEnemy()
+    {
+        // Option A : Retourner le visuel du Sprite (le plus simple)
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.flipX = !spriteRenderer.flipX;
         }
     }
 }

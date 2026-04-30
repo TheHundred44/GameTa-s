@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d6cd55da1c93943a4ea6c8b817456d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipOnSpawn: 0
   speed: 2
   direction: 0
   amplitude: 1
@@ -174,7 +175,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 847f626a98be5124a97f7a540e22a209, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3.37, y: 4.1}

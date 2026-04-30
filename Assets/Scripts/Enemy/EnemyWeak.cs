@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyWeak : MonoBehaviour
 {
+    [Header("Réglages au Spawn")]
+    public bool flipOnSpawn = false;
+
     public float speed = 2f;
     public int direction = 0;
 
@@ -14,11 +17,15 @@ public class EnemyWeak : MonoBehaviour
     private float startY;
     private PlayerHealtth life;
 
+    private SpriteRenderer spriteRenderer;
+
     private void Start()
     {
         life = FindObjectOfType<PlayerHealtth>();
         // On mémorise la hauteur de départ pour osciller autour
         startY = transform.position.y;
+
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
@@ -41,6 +48,15 @@ public class EnemyWeak : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             if (life != null) life.LifeHit();
+        }
+    }
+
+    public void FlipEnemy()
+    {
+        // Option A : Retourner le visuel du Sprite (le plus simple)
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.flipX = true;
         }
     }
 }
